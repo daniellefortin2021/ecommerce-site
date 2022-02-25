@@ -13,6 +13,11 @@ router.get('/', (req, res) => {
       }
     ]
   })
+  .then((dbPostData) => res.json(dbPostData))
+  .catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  })
   
 });
 
@@ -25,6 +30,11 @@ router.get('/:id', (req, res) => {
         model: Product
       }
     ]
+  })
+  .then((dbPostData) => res.json(dbPostData))
+  .catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
   })
   
 });
@@ -53,6 +63,10 @@ router.put('/:id', (req, res) => {
       }
     }
   )
+  .then((updatedCategory) => {
+    res.json(updatedCategory);
+  })
+  .catch((err) => res.json(err));
 });
 
 router.delete('/:id', (req, res) => {
