@@ -29,7 +29,10 @@ router.get('/:id', (req, res) => {
       {
         model: Product
       }
-    ]
+    ],
+    where: {
+      id: req.params.id
+    }
   })
   .then((dbPostData) => res.json(dbPostData))
   .catch((err) => {

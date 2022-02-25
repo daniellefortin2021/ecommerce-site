@@ -28,7 +28,10 @@ router.get('/:id', (req, res) => {
     // be sure to include its associated Category and Tag data
     include: [
       { model: Category }, { model: Tag }
-    ]
+    ],
+    where: {
+      id: req.params.id
+    }
   })
   .then((dbPostData) => res.json(dbPostData))
   .catch((err) => {
