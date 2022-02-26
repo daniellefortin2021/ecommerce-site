@@ -17,6 +17,8 @@ This project was built with JavaScript, Node, Express, and MySql
 https://github.com/daniellefortin2021/ecommerce-site
 
 ## Preview
+![screenshot of the routes in Insomnia](./assets/preview.png)
+View preview: https://watch.screencastify.com/v/HiZVwj6WvkQPcULYwGLk 
 
 ## Installation
 Install Node.JS on your computer by running npm install in the command line. Then, clone the repository to your computer.
